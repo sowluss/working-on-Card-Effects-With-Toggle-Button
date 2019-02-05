@@ -38,11 +38,46 @@ input {
   background: #fff;
   transition: .5s;
   text-align: center;
-  line-height: 50px;
+  line-height: 48px;
   font-size: 36px;
   box-shadow: 0 0 0 0px #9c27b0;
 }
 
 input:checked~.toggle {
-  box-shadow: 0 0 0 0px #9c27b0;
+  box-shadow: 0 0 0 500px #9c27b0;
+  transform: rotate(225deg);
+}
+
+.imgBx img {
+  width: 100%;
+}
+
+.imgBx,
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.details {
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 11;
+  pointer-events: none;
+  transition: .5s;
+  opacity: 0;
+}
+
+input:checked~.details {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+.details blockquote {
+  margin: 0;
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
 }
